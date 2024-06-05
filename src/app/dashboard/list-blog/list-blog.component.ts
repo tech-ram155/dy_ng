@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,11 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule]
 })
 export class ListBlogComponent {
-  blogs = [
-    { id: 1, title: 'Blog 1', content: 'Content 1' },
-    { id: 2, title: 'Blog 2', content: 'Content 2' },
-  ];
-
+  @Input() blogs: any[] = [];
   @Output() onEdit = new EventEmitter<any>();
 
   editBlog(blog: any) {
