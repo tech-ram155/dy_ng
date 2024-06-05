@@ -1,0 +1,6 @@
+<div *ngFor="let blog of blogs">
+  <h3>{{ blog.title }}</h3>
+  <p>{{ blog.content }}</p>
+  <button (click)="editBlog(blog)">Edit</button>
+  <button (click)="deleteBlog(blog)">Delete</button>
+</div>
